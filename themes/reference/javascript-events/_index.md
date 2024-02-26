@@ -66,6 +66,7 @@ PrestaShop will dispatch many events from `core.js` so your code can rely on it:
 Event Name            | Description
 ----------------------|------------------------------------------------------------------------------------------
  `updateCart`         | On the cart page, everytime something happens (change quantity, remove product and so on) the cart is reloaded by ajax call. After the cart is updated, this event is triggered.
+ `updatedCart`         | On the cart page, after the cart has been updated.
  `updatedAddressForm`  | In the address form, some input will trigger ajax calls to modify the form (like country change), after the form is updated, this event is triggered.
  `updateDeliveryForm` | During checkout, if the delivery address is modified, this event will be trigged.
  `changedCheckoutStep` | Each checkout step **submission** will fire this event.
