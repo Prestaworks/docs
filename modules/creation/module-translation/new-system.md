@@ -184,7 +184,7 @@ class CustomModuleClass
     
     public function __construct(Translator $translator)
     {
-        $this->translator = $translator
+        $this->translator = $translator;
     }
     
     public function foo()
