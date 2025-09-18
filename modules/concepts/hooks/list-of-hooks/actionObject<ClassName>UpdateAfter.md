@@ -26,3 +26,25 @@ description: ''
 ```php
 Hook::exec('actionObject' . $this->getFullyQualifiedName() . 'UpdateAfter', ['object' => $this]);
 ```
+
+## Example implementation
+
+In this example, we dump the product object after the changes have been saved: 
+
+First you need to hook your module during installation.
+```php
+public function install()
+{
+    return parent::install() 
+        && $this->registerHook('actionObjectProductUpdateAfter')
+        ;
+}
+```
+
+Then you need to add the function that is called when the hook is triggered.
+```php
+public function hookActionObjectProductUpdateAfter($params)
+{
+    dump($params['object']);
+}
+```
